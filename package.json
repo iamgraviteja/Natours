@@ -1,0 +1,24 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "tours, nature",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass ./sass/main.scss ./css/style.css",
+    "build-watch": "node-sass sass/main.scss css/style.css -w",
+    "start": "npm run build && live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamgraviteja/Natours.git"
+  },
+  "author": "Raviteja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamgraviteja/Natours/issues"
+  },
+  "homepage": "https://github.com/iamgraviteja/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
