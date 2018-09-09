@@ -5,6 +5,7 @@
     background-position: top;
     clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
     position: relative;
+    transform: translate3d(0, 0, 0);
 
     &__logo-box {
         position: absolute;
