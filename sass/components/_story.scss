@@ -1,6 +1,6 @@
 .story {
     width: 75%;
-    background-color: $color-white;
+    background-color: rgba($color-white, 0.6);
     border-radius: 3px;
     font-size: $default-font-size;
     margin: 0 auto;
@@ -23,9 +23,36 @@
 
     &__img {
         height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        transition: all 0.5s;
+    }
+
+    &__caption {
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
     }
 
     &__text {
         transform: skewX(12deg);
     }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        -webkit-filter: blur(3px) brightness(80%);
+        filter: blur(3px) brightness(80%);
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
 }
