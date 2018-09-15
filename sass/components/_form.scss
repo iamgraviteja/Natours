@@ -10,14 +10,15 @@
 
     &__input {
         background-color: rgba($color-white, $alpha: 0.8);
-        color: inherit;
-        font-size: 1.5rem;
-        font-family: inherit;
-        display: block;
-        padding: 1.5rem 2rem;
         border: none;
         border-radius: 2px;
         border-bottom: 3px solid transparent;
+        display: block;
+        color: inherit;
+        font-size: 1.5rem;
+        font-family: inherit;
+        padding: 1.5rem 2rem;
+        transition: all 0.3s;
         width: 100%;
 
         &:focus {
@@ -29,6 +30,7 @@
                 border-bottom-color: $color-secondary-dark;                
             }
         }
+
         &::-webkit-input-placeholder {
             color: $color-grey-dark-2;
         }
@@ -47,5 +49,51 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
+    }
+
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+
+    }
+    
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        display: inline-block;
+        position: relative;
+        padding-left: 4.5rem;
+        cursor: pointer;
+    }
+
+    &__radio-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        
+        &::after {
+            content: "";
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1.3rem;
+            height: 1.3rem;
+            background-color: $color-primary; 
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after{
+        opacity: 1;
     }
 }
