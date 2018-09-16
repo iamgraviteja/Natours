@@ -491,6 +491,7 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     transform: scale(1.4);
     color: #55C57A;
+    padding: 0 0.5rem;
     outline: 0.1rem solid #55C57A; }
   .footer__copyright {
     border-top: 1px solid #777777;
@@ -545,6 +546,57 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #FFFFFF;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 2000; }
+
+.navigation__background {
+  background-image: radial-gradient(#7ED56F, #28B485);
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  z-index: 1000;
+  transform: scale(80); }
+
+.navigation__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1500; }
+
+.navigation__list {
+  list-style: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.navigation__item {
+  color: inherit; }
+  .navigation__item:not(:last-child) {
+    margin: 1rem; }
+
+.navigation__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 1rem 2rem; }
 
 .section-about {
   background-color: #F7F7F7;
