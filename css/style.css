@@ -459,6 +459,45 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%); }
 
+.footer {
+  background-color: #333333;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #F7F7F7; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #777777;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #F7F7F7;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: #333333;
+    transition: all 0.3s; }
+  .footer__link:hover, .footer__link:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.4);
+    color: #55C57A;
+    outline: 0.1rem solid #55C57A; }
+  .footer__copyright {
+    border-top: 1px solid #777777;
+    float: right;
+    padding-top: 2rem;
+    width: 80%; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
