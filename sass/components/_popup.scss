@@ -6,17 +6,23 @@
     z-index: 2100;
     height: 100vh;
     width: 100%;
-
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+   
     &__content {
+        @include centervandh;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, $alpha: 0.2);
         border-radius: 3px;
         display: table;
         overflow: hidden;
         width: 75%;
-        @include centervandh;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.25);
+        transition: all 0.4s 0.2s;
     }
-   
+
     &__left {
         display: table-cell;
         width: 33.33%;
@@ -49,5 +55,34 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+    }
+    
+    //Popup open
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }    
+    
+    &__close {
+
+        &:link, &:visited {
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            color: $color-grey-dark;
+            font-size: 3rem;
+            line-height: 1;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 }
