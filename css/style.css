@@ -1,3 +1,19 @@
+/*
+breakpoints
+
+- phones: 600px
+- tablet in portrait: 900px
+- tablet in landscape: 1200px
+- larger desktops: 1800px
+
+$breakpoint can be 
+- phone
+- tab-port
+- tab-land
+- lg-desktop
+
+max/min-width converted to em as rem are not supported for media queries.
+*/
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -36,6 +52,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -474,8 +499,8 @@ body {
     top: 2.5rem;
     right: 2.5rem;
     color: #777777;
-    line-height: 1;
     font-size: 3rem;
+    line-height: 1;
     text-decoration: none;
     transition: all 0.2s; }
   .popup__close:hover {
