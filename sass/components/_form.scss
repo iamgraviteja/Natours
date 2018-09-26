@@ -3,6 +3,11 @@
     &__group {
         width: 90%;
         
+        @include respond(tab-land) { 
+            text-align: center;
+            width: 100%;
+        }
+
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
@@ -55,6 +60,10 @@
         width: 49%;
         display: inline-block;
 
+        @include respond(tab-land) { 
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
     
     &__radio-input {

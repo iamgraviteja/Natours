@@ -9,6 +9,16 @@
     padding-left: 9rem;
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 3rem;
+        padding-left: 5rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);            
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -19,6 +29,11 @@
         clip-path: circle(50% at 50% 50%);
         background-color: aliceblue;
         transform: translateX(-3rem) skewX(12deg);
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);            
+        }
+    
     }
 
     &__img {
@@ -42,6 +57,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);            
+        }
     }
 
     &:hover &__img {
